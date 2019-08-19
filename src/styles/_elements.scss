@@ -1,0 +1,66 @@
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+body {
+  $body-background-gradient-color-1: rgb(0, 190, 240);
+  $body-background-gradient-color-2: rgb(80, 210, 220);
+  $body-background-backup-color: $body-background-gradient-color-1;
+
+  background: $body-background-backup-color;
+  background: linear-gradient(180deg, $body-background-gradient-color-1 0%, $body-background-gradient-color-2 100%);
+  overflow-y: scroll;
+  color: $default-text-color;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.4rem;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+textarea {
+  display: block;
+  overflow: auto;
+  resize: none;
+}
+
+::placeholder {
+  color: $default-placeholder-text-color;
+}
+
+:focus {
+  outline-color: $brand-color-1;
+}
+
+hr {
+  border: 1px solid $default-delimiter-color;
+}
+
+a,
+a:visited {
+  color: $brand-color-1;
+
+  &:hover,
+  &:focus {
+    color: rgba($brand-color-1, 0.8);
+    outline: 0;
+  }
+}

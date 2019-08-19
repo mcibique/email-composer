@@ -1,0 +1,64 @@
+.form-input {
+  display: block;
+  width: 100%;
+  border: 1px solid $default-border-color;
+  border-radius: $default-border-radius;
+  padding: 0.9rem 1rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $brand-color-1;
+  }
+
+  &--has-error,
+  &--has-error:focus {
+    border-color: $error-state-color;
+  }
+}
+
+.button {
+  $button-target-height: 3.2rem;
+  $button-icon-size: 2rem;
+  $button-background-color: $brand-color-1;
+  $button-text-color: #fff;
+  $button-disabled-background-color: #e0e0e0;
+  $button-disabled-text-color: #aaa;
+  $button-focused-background-color: rgba($button-background-color, 0.8);
+  $button-focused-text-color: $button-text-color;
+
+  appearance: none;
+  padding: ($button-target-height - $button-icon-size) / 2 2rem;
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border: 0;
+  border-radius: $button-target-height / 2;
+  line-height: $button-icon-size;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: top;
+    width: $button-icon-size;
+    height: $button-icon-size;
+    margin-right: 1rem;
+    fill: currentColor;
+  }
+
+  &[disabled] {
+    background-color: $button-disabled-background-color;
+    color: $button-disabled-text-color;
+  }
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 0;
+      background-color: $button-focused-background-color;
+      color: $button-focused-text-color;
+    }
+  }
+}
